@@ -20,17 +20,13 @@
 
             for (Month month = Month.January; month <= Month.December; month++)
             {
-                var result = service.CalculateAndSaveCustomerEarningsForMonthAsync(1, month).Result;
-                Console.WriteLine($"{ result.Name } ({month}) = {result.TotalEarning}");
+                for (int i = 1; i <= 4; i++)
+                {
+                    var result = service.CalculateAndSaveCustomerEarningsForMonthAsync(i, month).Result;
+                    Console.WriteLine($"{ result.Name } ({month}) = {result.TotalEarning}");
+                }
 
-                result = service.CalculateAndSaveCustomerEarningsForMonthAsync(2, month).Result;
-                Console.WriteLine($"{ result.Name } ({month}) = {result.TotalEarning}");
-
-                result = service.CalculateAndSaveCustomerEarningsForMonthAsync(3, month).Result;
-                Console.WriteLine($"{ result.Name } ({month}) = {result.TotalEarning}");
-
-                result = service.CalculateAndSaveCustomerEarningsForMonthAsync(4, month).Result;
-                Console.WriteLine($"{ result.Name } ({month}) = {result.TotalEarning}\n");
+                Console.WriteLine();
             }
 
             var total = service.GetCustomerEarningsForMonthRangeAsync(1, Month.January, Month.December).Result;
