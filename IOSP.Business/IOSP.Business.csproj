@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1_WithoutIOSP\CustomerEarningsService.cs" />
-    <Compile Include="WithIOSP_And_CPS\CustomerEarningsCpsOperationService.cs" />
-    <Compile Include="WithIOSP_And_CPS\CustomerEarningsCpsIntegrationService.cs" />
+    <Compile Include="3_WithIOSP_And_CPS\CustomerEarningsCpsOperationService.cs" />
+    <Compile Include="3_WithIOSP_And_CPS\CustomerEarningsCpsIntegrationService.cs" />
     <Compile Include="2_WithIOSP\CustomerEarningsOperationService.cs" />
     <Compile Include="2_WithIOSP\CustomerEarningsIntegrationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
